@@ -1,0 +1,76 @@
+.main_login {
+    display: flex;
+    height: 100vh;
+}
+
+.banner {
+    background-color: #B51D44;
+
+    width: 50%;
+
+    background-image: url("../../assets/img/fundoLogin.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section_login {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_login {
+    color: black;
+
+    height: 50%;
+    width: 49%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form_login a {
+    text-decoration: none;
+    color:#A6A0A0;
+    font-size: 12px;
+}
+
+.campos_login {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campo_input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.campo_input input {
+    height: 28px;
+    padding: 0 10px;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
+@media screen and (max-width: 768px) {
+    .banner{
+        display: none;  
+    }
+
+    .section_login img {
+        width: 247px;
+        height: 47px;
+    }
+}

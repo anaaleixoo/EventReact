@@ -1,0 +1,85 @@
+.cadastro_titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 4px;
+}
+
+.cadastro_titulo h1 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.cadastro_titulo hr {
+    width: 180px;
+    border: 1px solid #B51D44;
+    margin-bottom: 40px;
+}
+
+
+.form_cadastro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* flex-direction: column; */
+}
+
+.form_cadastro h1 {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.campo_cad_nome input {
+    margin-bottom: 40px;
+    width: 356px;
+    padding-left: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
+.campo_cad_eventos select {
+    margin-bottom: 40px;
+    width: 356px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
+.img_cadastro {
+    height: 238px;
+    width: 436px;
+}
+
+.section_cadastro {
+    min-height: 399px;
+    padding-bottom: 35px;
+}
+
+@media screen and (max-width: 880px) {
+    .campos_cadastro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img_cadastro {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .form_cadastro h1 {
+        font-size: 20px;
+    }
+
+    .campo_preen,
+    .campo_cad_nome {
+        padding: 0px 0px 0px 0px;
+    }
+}
