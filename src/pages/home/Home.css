@@ -1,0 +1,126 @@
+.banner-div-home img {
+    /*Classe do Banner*/
+    width: 100%;
+}
+
+.cards-home hr {
+    max-width: 200px;
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #B51D44;
+}
+
+.cards-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-pai {
+    display: flex;
+}
+
+.cardzin {
+    font: "poppins";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    height: 250px;
+    width: 225px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 2px solid #821B47;
+    font-size: small;
+    border-radius: 5px;
+}
+
+.link-card {
+    color: #B51D44;
+    text-decoration: none;
+    font-size: medium;
+}
+
+/* .segundo-banner img{
+    margin-top: 60px;
+    width: 100%;
+} */
+
+.segundo-banner {
+    background-image: url("../../assets/img/banner2.png");
+    width: 100%;
+    height: 300px;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px
+}
+
+.segundo-banner h2 {
+    margin-top: 20px;
+
+}
+
+.segundo-banner hr {
+    max-width: 200px;
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 50px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.segundo-p {
+    width: 800px;
+    font-size: small;
+}
+
+.pre-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #00000055;
+}
+
+.pre-footer h2 {
+    margin-top: 20px;
+}
+
+.pre-footer hr {
+    max-width: 200px;
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #B51D44;
+}
+
+.pai-pre-footer {
+    display: flex;
+    max-width: 100%s;
+
+}
+
+.mapa {
+    margin-right: 20px;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 20px;
+}
+
+.fim {
+    width: 100%;
+    border-bottom: solid 2px #00000055;
+}
