@@ -6,6 +6,8 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import Comentario from "../../assets/img/Comentario.svg"
 import Toggle from "../../components/toggle/Toggle";
+import Descricao from "../../assets/img/Descricao.svg"
+import Modal from "../../components/modal/Modal";
 
 const ListagemEventos = (props) => {
     const [listaEventos, setListaEventos] = useState([]);
@@ -19,7 +21,6 @@ const ListagemEventos = (props) => {
             console.log(error);
         }
     }
-
     useEffect(() => {
         listarEventos();
     }, [])
@@ -28,7 +29,7 @@ const ListagemEventos = (props) => {
         <>
             <Header
                 user="Aluno"
-                botao_logar="none"
+                botao_logar="none"a
             />
             <main>
                 <section className="layout_grid listagem_section">
@@ -48,19 +49,33 @@ const ListagemEventos = (props) => {
                         <table>
                             <tr className="list_tabela">
                                 <th>Titulo</th>
+                                <th>Data do Evento</th>
                                 <th>Tipo Evento</th>
+                                <th>Descrição</th>
                                 <th>Comentários</th>
                                 <th>Participar</th>
                             </tr>
+                            
 
                             <tr className="list_presenca">
-                                <td data-cell="Titulo">xxxxxxxx</td>
+                                <td>Festa Buffet</td>
+                                <td>04/06/2025</td>
+                                <td>Trabalho</td>
+                                <td>
+                                    <button className="icon">
+                                        <img src={Descricao} alt="" />
+                                    </button>
+                                </td>
 
-                                <td data-cell="Tipo Evento">xxxxxxxx</td>
-
-                                <td data-cell="Comentario"><img src={Comentario} alt="Comentário" /></td>
-
+                                    <td>
+                                    <button className="icon">
+                                        <img src={Comentario} alt="" />
+                                    </button>
+                                </td>
+                                
+                                
                                 <td data-cell="Presenca"><Toggle /></td>
+
                             </tr>
                         </table>
                     </div>
@@ -69,6 +84,7 @@ const ListagemEventos = (props) => {
             <Footer
                 visibilidade="none"
             />
+            <Modal/>
         </>
     )
 }

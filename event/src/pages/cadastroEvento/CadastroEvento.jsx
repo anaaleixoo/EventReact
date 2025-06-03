@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
-import api from "../../services/Services";
-
 import Imagem from "../../assets/img/CadastroEvento.svg"
 import Cadastro from "../../components/cadastro/Cadastro";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Lista from "../../components/lista/Lista";
+
 import Swal from "sweetalert2";
+
+import { useEffect, useState } from "react";
+
+import api from "../../services/Services";
 
 const CadastroEvento = () => {
     const [listaEvento, setListaEvento] = useState([]);
@@ -37,7 +39,7 @@ const CadastroEvento = () => {
 
     async function listarTipoEvento() {
         try {
-            const resposta = await api.get("TiposEventos");
+            const resposta = await api.get("tiposEventos");
 
             setlistaTipoEvento(resposta.data)
         } catch (error) {
@@ -47,7 +49,6 @@ const CadastroEvento = () => {
 
     async function cadastrarEvento(e) {
         e.preventDefault();
-
         if (evento.trim() !== "") {
             try {
                 await api.post("eventos", { DataEvento: dataEvento, NomeEvento: evento, Descricao: descricao, IdTipoEvento: tipoEvento, IdInstituicao: instituicoes });
@@ -230,6 +231,7 @@ const CadastroEvento = () => {
 
                     tipoLista="Eventos"
                     lista={listaEvento}
+                    dataEvento={dataEvento}
 
                     funcDeletar={deletarEvento}
                     funcEditar={editarEvento}
