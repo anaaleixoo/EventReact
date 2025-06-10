@@ -1,19 +1,32 @@
 import { useEffect, useState } from "react"
 import imgDeletar from"../../assets/img/Excluir.svg";
 
+import "./Modal.css";
+
+import api from "../../services/Services";
+
 
 const Modal = (props) => {
+
   const [comentarios, setComentarios] = useState([])
-  const [novoComentario, setNovoComentario] =
+
+  const [novoComentario, setNovoComentario] = useState("");
+
+  const [usuarioId, setUsuarioId] = useState("817B69EB-ECFE-4E39-B872-F2871AF79756");
+
 async function listarComentarios() {
   try {
-    await api.get(`comentariosEventos/ListarSomenteExibe?id=${props.idEvento}`);
-    setComentarios(resposta.data)
+  const resposta = await api.get(`comentariosEventos/ListarSomenteExibe?id=${props.idEvento}`); 
+
+    setComentarios(resposta.data);
+
+    console.log(resposta.data);
 
 
   } catch (error) {
     console.log(error);
   }
+
   
 }
 useEffect(() => {
@@ -29,10 +42,10 @@ async function cadastrarComentario() {
       descricao = comentarios
     ));
   } catch (error) {
-    
+    console.error(error);
   }
 
-  async function deletarcomentario(idcomentario) {
+  async function deletarcomentario(idComentario) {
     try{
         await api.delete(`ComentarioEventos/${idComentario}`);
     } catch (error) {
